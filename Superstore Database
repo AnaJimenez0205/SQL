@@ -1,3 +1,5 @@
+# **This project uses the following superstore data:**
+
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -28,26 +30,26 @@ VALUES
     
 -- © Copyright 2025 Break Into Tech  --
 
--For this project I used SQL to gather information from the superstore database in refrence to items and their price. 
+# **For this project I used SQL to gather information from the superstore database in refrence to items and their price.** 
 
--- write your own SQL that orders items by price 
+## Order items by price. 
 
 SELECT item_name, price 
 FROM superstore
 ORDER BY price;
 
--- Write your own SQL query that will show a statistic about the item prices, like a sum, average, minimum, maximum, or count.
+## What is the most expensive item in the superstore?
 
 SELECT Max(price), item_name
 FROM superstore;
 
--- what is the least expensive item in Kitchen Supplies
+## What is the least expensive item in Kitchen Supplies?
 
 SELECT item_name, MIN(price)
 FROM superstore
 WHERE category= 'Kitchen Supplies';
 
---what is the average price of appliances. 
+## What is the average price of appliances? 
 
 SELECT AVG(price)
 FROM superstore
